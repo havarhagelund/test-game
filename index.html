@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#bfe3ff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Sandkassa</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚜</text></svg>" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <div id="hud">
+      <div class="bar left">
+        <button id="switch" class="pill" aria-label="Bytt kjøretøy"></button>
+        <button id="mode" class="pill" aria-label="Styremodus"></button>
+      </div>
+      <div id="meter"><span id="meter-icon"></span><div class="track"><div id="meter-fill"></div></div></div>
+      <div class="bar right">
+        <button id="sound" class="pill round" aria-label="Lyd">🔊</button>
+        <button id="full" class="pill round" aria-label="Fullskjerm">⛶</button>
+        <button id="help" class="pill round" aria-label="Hjelp">?</button>
+        <button id="reset" class="pill" aria-label="Nullstill">↺<span class="lbl"> Nullstill</span></button>
+      </div>
+    </div>
+    <div id="controls"></div>
+    <div id="toast"></div>
+    <div id="start">
+      <div class="card">
+        <div class="logo">🚜<span>⛱</span></div>
+        <h1>Sandkassa</h1>
+        <p>Grav, flytt og bygg i sanda.</p>
+        <ul id="help-list">
+          <li><b>Venstre spak</b> kjører</li>
+          <li><b>Høyre spak</b> løfter armen og svinger</li>
+          <li><b>Ut / Inn</b> strekker armen</li>
+          <li><b>🪣</b> tømmer skuffen · <b>🏰</b> lager slott av full skuff</li>
+          <li>Dra på skjermen for å se rundt, knip for zoom</li>
+          <li><b>Ekspert</b>: ekte ISO-spaker og beltespaker</li>
+        </ul>
+        <button id="go">Lek!</button>
+        <p class="hint" id="loading">Laster …</p>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
